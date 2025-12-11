@@ -1,0 +1,54 @@
+{
+    "appCode": "notion-builder",
+    "appName": "Notion Template Architect",
+    "branding": {
+        "logo": "/logo.png",
+        "favicon": "/favicon.ico",
+        "primaryColor": "#000000"
+    },
+    "pricingModel": "freemium",
+    "plans": {
+        "free": {
+            "name": "Free",
+            "price": 0,
+            "currency": "INR",
+            "interval": "forever",
+            "limits": {
+                "templatesPerMonth": 3,
+                "aiGenerations": 5,
+                "storage": "100MB"
+            },
+            "features": [
+                "3 template downloads per month",
+                "5 AI generations",
+                "Basic templates",
+                "Community support"
+            ]
+        },
+        "pro": {
+            "name": "Pro",
+            "price": 200,
+            "currency": "INR",
+            "interval": "monthly",
+            "limits": {
+                "templatesPerMonth": -1,
+                "aiGenerations": -1,
+                "storage": "5GB"
+            },
+            "features": [
+                "Unlimited template downloads",
+                "Unlimited AI generations",
+                "Premium templates",
+                "Priority support",
+                "Early access to new templates",
+                "Custom template requests"
+            ]
+        }
+    },
+    "trial": {
+        "enabled": true,
+        "plan": "pro",
+        "durationDays": 7
+    },
+    "paymentGateway": "https://payments.bartlabs.in"
+}

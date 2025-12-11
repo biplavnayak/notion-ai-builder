@@ -1,0 +1,7969 @@
+{
+  "habit-tracker": {
+    "title": "Habit Tracker",
+    "description": "Track your daily habits with streaks, analytics, and motivational insights. Perfect for building consistent routines.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Habit Tracker Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Habit Tracker Dashboard",
+        "icon": "✅",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Habit Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track your daily habits with streaks, analytics, and motivational insights. Perfect for building consistent routines."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "project-tracker": {
+    "title": "Project Tracker",
+    "description": "Manage multiple projects with tasks, timelines, and team collaboration. Includes Kanban and timeline views.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Project Tracker Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Project Tracker Dashboard",
+        "icon": "📊",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Project Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Manage multiple projects with tasks, timelines, and team collaboration. Includes Kanban and timeline views."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "goal-tracker": {
+    "title": "Goal Tracker",
+    "description": "Set and achieve your goals with milestones, progress tracking, and reflection prompts.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Goal Tracker Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Goal Tracker Dashboard",
+        "icon": "🎯",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Goal Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Set and achieve your goals with milestones, progress tracking, and reflection prompts."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "daily-planner": {
+    "title": "Daily Planner",
+    "description": "Plan your day with time blocks, priorities, and daily reflections. Includes weekly and monthly views.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Daily Planner Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Daily Planner Dashboard",
+        "icon": "📅",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Daily Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Plan your day with time blocks, priorities, and daily reflections. Includes weekly and monthly views."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "meeting-notes": {
+    "title": "Meeting Notes Manager",
+    "description": "Organize meeting notes with action items, attendees, and follow-ups. Searchable and linkable.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Meeting Notes Manager Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Meeting Notes Manager Dashboard",
+        "icon": "📝",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Meeting Notes Manager"
+          },
+          {
+            "type": "callout",
+            "content": "Organize meeting notes with action items, attendees, and follow-ups. Searchable and linkable."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "okr-tracker": {
+    "title": "OKR Tracker",
+    "description": "Track Objectives and Key Results for teams and individuals. Quarterly reviews and progress dashboards.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "OKR Tracker Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "OKR Tracker Dashboard",
+        "icon": "🎯",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to OKR Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track Objectives and Key Results for teams and individuals. Quarterly reviews and progress dashboards."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "eisenhower-matrix": {
+    "title": "Eisenhower Matrix",
+    "description": "Prioritize tasks using the urgent/important framework. Visual quadrant view for better decision-making.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Eisenhower Matrix Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Eisenhower Matrix Dashboard",
+        "icon": "⚡",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Eisenhower Matrix"
+          },
+          {
+            "type": "callout",
+            "content": "Prioritize tasks using the urgent/important framework. Visual quadrant view for better decision-making."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "pomodoro-tracker": {
+    "title": "Pomodoro Tracker",
+    "description": "Track your focus sessions with Pomodoro technique. Log completed sessions and analyze productivity patterns.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Pomodoro Tracker Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Pomodoro Tracker Dashboard",
+        "icon": "🍅",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Pomodoro Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track your focus sessions with Pomodoro technique. Log completed sessions and analyze productivity patterns."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "weekly-review": {
+    "title": "Weekly Review System",
+    "description": "Reflect on your week with wins, challenges, and next week's priorities. Includes gratitude journal.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Weekly Review System Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Weekly Review System Dashboard",
+        "icon": "📖",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Weekly Review System"
+          },
+          {
+            "type": "callout",
+            "content": "Reflect on your week with wins, challenges, and next week's priorities. Includes gratitude journal."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "reading-list": {
+    "title": "Reading List & Book Tracker",
+    "description": "Track books you want to read, are reading, and have finished. Include notes, quotes, and ratings.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Reading List & Book Tracker Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Reading List & Book Tracker Dashboard",
+        "icon": "📚",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Reading List & Book Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track books you want to read, are reading, and have finished. Include notes, quotes, and ratings."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "note-taking-system": {
+    "title": "Zettelkasten Note System",
+    "description": "Build a second brain with interconnected notes, tags, and backlinks. Perfect for researchers and writers.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Zettelkasten Note System Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Zettelkasten Note System Dashboard",
+        "icon": "🧠",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Zettelkasten Note System"
+          },
+          {
+            "type": "callout",
+            "content": "Build a second brain with interconnected notes, tags, and backlinks. Perfect for researchers and writers."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "decision-log": {
+    "title": "Decision Log",
+    "description": "Document important decisions with context, alternatives considered, and outcomes. Learn from past choices.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Decision Log Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Decision Log Dashboard",
+        "icon": "🤔",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Decision Log"
+          },
+          {
+            "type": "callout",
+            "content": "Document important decisions with context, alternatives considered, and outcomes. Learn from past choices."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "idea-inbox": {
+    "title": "Idea Inbox",
+    "description": "Capture and organize ideas with tags, categories, and development stages. Never lose a great idea again.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Idea Inbox Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Idea Inbox Dashboard",
+        "icon": "💡",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Idea Inbox"
+          },
+          {
+            "type": "callout",
+            "content": "Capture and organize ideas with tags, categories, and development stages. Never lose a great idea again."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "time-tracker": {
+    "title": "Time Tracker",
+    "description": "Log time spent on projects and tasks. Generate reports and analyze where your time goes.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Time Tracker Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Time Tracker Dashboard",
+        "icon": "⏱️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Time Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Log time spent on projects and tasks. Generate reports and analyze where your time goes."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "sprint-planner": {
+    "title": "Sprint Planner",
+    "description": "Plan and execute 2-week sprints with backlog, sprint board, and retrospectives. Agile made simple.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Sprint Planner Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Sprint Planner Dashboard",
+        "icon": "🏃",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Sprint Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Plan and execute 2-week sprints with backlog, sprint board, and retrospectives. Agile made simple."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "kanban-board": {
+    "title": "Kanban Board",
+    "description": "Visual workflow management with customizable columns. Track work in progress and completed tasks.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Kanban Board Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Kanban Board Dashboard",
+        "icon": "📋",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Kanban Board"
+          },
+          {
+            "type": "callout",
+            "content": "Visual workflow management with customizable columns. Track work in progress and completed tasks."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "gtd-system": {
+    "title": "Getting Things Done (GTD)",
+    "description": "Complete GTD implementation with inbox, next actions, projects, and contexts. Master productivity.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Getting Things Done (GTD) Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Getting Things Done (GTD) Dashboard",
+        "icon": "✨",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Getting Things Done (GTD)"
+          },
+          {
+            "type": "callout",
+            "content": "Complete GTD implementation with inbox, next actions, projects, and contexts. Master productivity."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "wiki-knowledge-base": {
+    "title": "Team Wiki & Knowledge Base",
+    "description": "Centralize team knowledge with docs, SOPs, and FAQs. Searchable and collaborative.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Team Wiki & Knowledge Base Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Team Wiki & Knowledge Base Dashboard",
+        "icon": "📖",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Team Wiki & Knowledge Base"
+          },
+          {
+            "type": "callout",
+            "content": "Centralize team knowledge with docs, SOPs, and FAQs. Searchable and collaborative."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "bookmark-manager": {
+    "title": "Bookmark Manager",
+    "description": "Save and organize web links with tags, categories, and notes. Your personal internet library.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Bookmark Manager Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Bookmark Manager Dashboard",
+        "icon": "🔖",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Bookmark Manager"
+          },
+          {
+            "type": "callout",
+            "content": "Save and organize web links with tags, categories, and notes. Your personal internet library."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "password-vault": {
+    "title": "Password Vault",
+    "description": "Securely store passwords, API keys, and sensitive info. Organized by category with search.",
+    "databases": [
+      {
+        "key": "main_db",
+        "title": "Password Vault Database",
+        "description": "Main tracking database",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "To Do",
+              "In Progress",
+              "Done"
+            ]
+          },
+          "Priority": {
+            "type": "select",
+            "options": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "Due Date": {
+            "type": "date"
+          },
+          "Tags": {
+            "type": "multi_select",
+            "options": [
+              "Work",
+              "Personal"
+            ]
+          }
+        }
+      },
+      {
+        "key": "archive_db",
+        "title": "Archive",
+        "description": "Completed items history",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Completion Date": {
+            "type": "date"
+          },
+          "Rating": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Password Vault Dashboard",
+        "icon": "🔐",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Welcome to Password Vault"
+          },
+          {
+            "type": "callout",
+            "content": "Securely store passwords, API keys, and sensitive info. Organized by category with search."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Active Items"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "main_db"
+          }
+        ]
+      }
+    ]
+  },
+  "expense-tracker": {
+    "title": "Expense Tracker",
+    "description": "Monitor your spending with categories, budgets, and visual analytics. Stay on top of your finances.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Monitor your spending with categories, budgets, and visual analytics. Stay on top of your finances."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "budget-planner": {
+    "title": "Budget Planner",
+    "description": "Create monthly budgets with income, expenses, and savings goals. Track actual vs planned spending.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Create monthly budgets with income, expenses, and savings goals. Track actual vs planned spending."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "investment-tracker": {
+    "title": "Investment Portfolio Tracker",
+    "description": "Track stocks, crypto, and other investments. Monitor performance, dividends, and allocation.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Track stocks, crypto, and other investments. Monitor performance, dividends, and allocation."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "debt-payoff": {
+    "title": "Debt Payoff Planner",
+    "description": "Track debts and create payoff strategies. Visualize progress with snowball or avalanche methods.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Track debts and create payoff strategies. Visualize progress with snowball or avalanche methods."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "subscription-tracker": {
+    "title": "Subscription Tracker",
+    "description": "Monitor all your subscriptions with renewal dates and costs. Identify and cancel unused services.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Monitor all your subscriptions with renewal dates and costs. Identify and cancel unused services."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "invoice-manager": {
+    "title": "Invoice Manager",
+    "description": "Create and track invoices for freelancers and small businesses. Monitor payment status and overdue amounts.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Create and track invoices for freelancers and small businesses. Monitor payment status and overdue amounts."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "net-worth-tracker": {
+    "title": "Net Worth Tracker",
+    "description": "Calculate and track your net worth over time. Include assets, liabilities, and growth charts.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Calculate and track your net worth over time. Include assets, liabilities, and growth charts."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "savings-goals": {
+    "title": "Savings Goals Tracker",
+    "description": "Set and track multiple savings goals. Visualize progress and calculate required monthly contributions.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Set and track multiple savings goals. Visualize progress and calculate required monthly contributions."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "tax-organizer": {
+    "title": "Tax Organizer",
+    "description": "Organize tax documents, deductions, and receipts. Prepare for tax season stress-free.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Organize tax documents, deductions, and receipts. Prepare for tax season stress-free."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "crypto-portfolio": {
+    "title": "Crypto Portfolio Tracker",
+    "description": "Track cryptocurrency holdings across wallets and exchanges. Monitor prices and portfolio value.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Track cryptocurrency holdings across wallets and exchanges. Monitor prices and portfolio value."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "rental-property": {
+    "title": "Rental Property Manager",
+    "description": "Manage rental properties with tenant info, lease tracking, maintenance, and income/expenses.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Manage rental properties with tenant info, lease tracking, maintenance, and income/expenses."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "business-finances": {
+    "title": "Small Business Finances",
+    "description": "Track business income, expenses, invoices, and profit/loss. Simple bookkeeping for entrepreneurs.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Track business income, expenses, invoices, and profit/loss. Simple bookkeeping for entrepreneurs."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "bill-tracker": {
+    "title": "Bill Payment Tracker",
+    "description": "Never miss a bill payment. Track due dates, amounts, and payment history with reminders.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Never miss a bill payment. Track due dates, amounts, and payment history with reminders."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "financial-dashboard": {
+    "title": "Personal Finance Dashboard",
+    "description": "Complete financial overview with income, expenses, net worth, and goals in one place.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Complete financial overview with income, expenses, net worth, and goals in one place."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "receipt-organizer": {
+    "title": "Receipt Organizer",
+    "description": "Store and categorize receipts for expenses, warranties, and returns. Searchable database.",
+    "databases": [
+      {
+        "key": "transactions_db",
+        "title": "Transactions",
+        "description": "All income and expenses",
+        "properties": {
+          "Description": {
+            "type": "title"
+          },
+          "Amount": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Income",
+              "Expense"
+            ]
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "Food",
+              "Transport",
+              "Utilities"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "key": "accounts_db",
+        "title": "Accounts",
+        "description": "Bank accounts and wallets",
+        "properties": {
+          "Account Name": {
+            "type": "title"
+          },
+          "Balance": {
+            "type": "number"
+          },
+          "Type": {
+            "type": "select",
+            "options": [
+              "Checking",
+              "Savings",
+              "Credit"
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Finance Overview",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Financial Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Store and categorize receipts for expenses, warranties, and returns. Searchable database."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Recent Transactions"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "transactions_db"
+          }
+        ]
+      }
+    ]
+  },
+  "workout-tracker": {
+    "title": "Workout Tracker",
+    "description": "Log your workouts, track progress, and plan your fitness journey with exercise databases and analytics.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Log your workouts, track progress, and plan your fitness journey with exercise databases and analytics."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "meal-planner": {
+    "title": "Meal Planner",
+    "description": "Plan your weekly meals with recipes, shopping lists, and nutritional tracking.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Plan your weekly meals with recipes, shopping lists, and nutritional tracking."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "calorie-tracker": {
+    "title": "Calorie & Macro Tracker",
+    "description": "Track daily calories, macros, and nutrition. Set goals and monitor progress towards targets.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track daily calories, macros, and nutrition. Set goals and monitor progress towards targets."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "water-tracker": {
+    "title": "Water Intake Tracker",
+    "description": "Track daily water consumption with goals and reminders. Build healthy hydration habits.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track daily water consumption with goals and reminders. Build healthy hydration habits."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "sleep-tracker": {
+    "title": "Sleep Tracker",
+    "description": "Log sleep hours, quality, and patterns. Identify factors affecting your sleep quality.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Log sleep hours, quality, and patterns. Identify factors affecting your sleep quality."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "meditation-log": {
+    "title": "Meditation & Mindfulness Log",
+    "description": "Track meditation sessions, techniques, and reflections. Build a consistent mindfulness practice.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track meditation sessions, techniques, and reflections. Build a consistent mindfulness practice."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "symptom-tracker": {
+    "title": "Health Symptom Tracker",
+    "description": "Log symptoms, medications, and doctor visits. Share reports with healthcare providers.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Log symptoms, medications, and doctor visits. Share reports with healthcare providers."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "running-log": {
+    "title": "Running Log",
+    "description": "Track runs with distance, pace, routes, and personal records. Plan training for races.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track runs with distance, pace, routes, and personal records. Plan training for races."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "yoga-practice": {
+    "title": "Yoga Practice Tracker",
+    "description": "Log yoga sessions, poses, and progress. Track flexibility and strength improvements.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Log yoga sessions, poses, and progress. Track flexibility and strength improvements."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "weight-tracker": {
+    "title": "Weight & Body Measurements",
+    "description": "Track weight, body measurements, and progress photos. Visualize your fitness journey.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track weight, body measurements, and progress photos. Visualize your fitness journey."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "recipe-book": {
+    "title": "Healthy Recipe Book",
+    "description": "Store healthy recipes with nutritional info, ingredients, and cooking instructions.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Store healthy recipes with nutritional info, ingredients, and cooking instructions."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "mental-health": {
+    "title": "Mental Health Journal",
+    "description": "Track mood, emotions, and mental health patterns. Include gratitude and reflection prompts.",
+    "databases": [
+      {
+        "key": "logs_db",
+        "title": "Daily Logs",
+        "description": "Track health metrics",
+        "properties": {
+          "Date": {
+            "type": "title"
+          },
+          "Mood": {
+            "type": "select",
+            "options": [
+              "Happy",
+              "Neutral",
+              "Sad"
+            ]
+          },
+          "Sleep Hours": {
+            "type": "number"
+          },
+          "Water Intake": {
+            "type": "number"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      },
+      {
+        "key": "routines_db",
+        "title": "Routines",
+        "description": "Workout and habit routines",
+        "properties": {
+          "Routine Name": {
+            "type": "title"
+          },
+          "Frequency": {
+            "type": "select",
+            "options": [
+              "Daily",
+              "Weekly"
+            ]
+          },
+          "Duration": {
+            "type": "number"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Health Hub",
+        "icon": "💪",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Health & Fitness Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track mood, emotions, and mental health patterns. Include gratitude and reflection prompts."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Today's Log"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "logs_db"
+          }
+        ]
+      }
+    ]
+  },
+  "content-calendar": {
+    "title": "Content Calendar",
+    "description": "Plan and schedule your content across platforms. Includes idea bank, publishing schedule, and analytics.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Content Calendar Home",
+        "icon": "📅",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Content Calendar"
+          },
+          {
+            "type": "callout",
+            "content": "Plan and schedule your content across platforms. Includes idea bank, publishing schedule, and analytics."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "youtube-planner": {
+    "title": "YouTube Content Planner",
+    "description": "Plan videos with scripts, thumbnails, SEO, and publishing schedule. Track performance metrics.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "YouTube Content Planner Home",
+        "icon": "🎥",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "YouTube Content Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Plan videos with scripts, thumbnails, SEO, and publishing schedule. Track performance metrics."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "blog-manager": {
+    "title": "Blog Post Manager",
+    "description": "Manage blog posts from idea to publication. Track SEO keywords, drafts, and publishing dates.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Blog Post Manager Home",
+        "icon": "✍️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Blog Post Manager"
+          },
+          {
+            "type": "callout",
+            "content": "Manage blog posts from idea to publication. Track SEO keywords, drafts, and publishing dates."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "social-media-planner": {
+    "title": "Social Media Planner",
+    "description": "Schedule posts across Instagram, Twitter, LinkedIn, and more. Content library and analytics.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Social Media Planner Home",
+        "icon": "📱",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Social Media Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Schedule posts across Instagram, Twitter, LinkedIn, and more. Content library and analytics."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "podcast-planner": {
+    "title": "Podcast Production Hub",
+    "description": "Plan episodes, manage guests, track recording schedule, and organize show notes.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Podcast Production Hub Home",
+        "icon": "🎙️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Podcast Production Hub"
+          },
+          {
+            "type": "callout",
+            "content": "Plan episodes, manage guests, track recording schedule, and organize show notes."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "newsletter-manager": {
+    "title": "Newsletter Manager",
+    "description": "Plan and organize email newsletters. Track topics, drafts, and subscriber engagement.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Newsletter Manager Home",
+        "icon": "📧",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Newsletter Manager"
+          },
+          {
+            "type": "callout",
+            "content": "Plan and organize email newsletters. Track topics, drafts, and subscriber engagement."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "video-production": {
+    "title": "Video Production Tracker",
+    "description": "Manage video projects from pre-production to post. Track shots, edits, and deliverables.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Video Production Tracker Home",
+        "icon": "🎬",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Video Production Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Manage video projects from pre-production to post. Track shots, edits, and deliverables."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "photography-portfolio": {
+    "title": "Photography Portfolio",
+    "description": "Organize photos by project, client, and category. Track editing status and deliverables.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Photography Portfolio Home",
+        "icon": "📸",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Photography Portfolio"
+          },
+          {
+            "type": "callout",
+            "content": "Organize photos by project, client, and category. Track editing status and deliverables."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "writing-projects": {
+    "title": "Writing Projects Tracker",
+    "description": "Manage novels, articles, and writing projects. Track word count, deadlines, and submissions.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Writing Projects Tracker Home",
+        "icon": "📖",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Writing Projects Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Manage novels, articles, and writing projects. Track word count, deadlines, and submissions."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "influencer-collab": {
+    "title": "Influencer Collaboration Tracker",
+    "description": "Manage brand partnerships, sponsorships, and collaboration details. Track deliverables and payments.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Influencer Collaboration Tracker Home",
+        "icon": "🤝",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Influencer Collaboration Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Manage brand partnerships, sponsorships, and collaboration details. Track deliverables and payments."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "crm-simple": {
+    "title": "Simple CRM",
+    "description": "Manage client relationships with contacts, deals, and communication history. Perfect for freelancers and small businesses.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Simple CRM Home",
+        "icon": "👥",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Simple CRM"
+          },
+          {
+            "type": "callout",
+            "content": "Manage client relationships with contacts, deals, and communication history. Perfect for freelancers and small businesses."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "sales-pipeline": {
+    "title": "Sales Pipeline",
+    "description": "Track deals through your sales process. Forecast revenue and identify bottlenecks.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Sales Pipeline Home",
+        "icon": "💼",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Sales Pipeline"
+          },
+          {
+            "type": "callout",
+            "content": "Track deals through your sales process. Forecast revenue and identify bottlenecks."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "client-portal": {
+    "title": "Client Portal",
+    "description": "Share project updates, files, and invoices with clients. Professional client communication.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Client Portal Home",
+        "icon": "🗂️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Client Portal"
+          },
+          {
+            "type": "callout",
+            "content": "Share project updates, files, and invoices with clients. Professional client communication."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "freelance-business": {
+    "title": "Freelance Business OS",
+    "description": "Complete freelance management: clients, projects, invoices, time tracking, and finances.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Freelance Business OS Home",
+        "icon": "💻",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Freelance Business OS"
+          },
+          {
+            "type": "callout",
+            "content": "Complete freelance management: clients, projects, invoices, time tracking, and finances."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "employee-directory": {
+    "title": "Employee Directory",
+    "description": "Organize team information with contacts, roles, departments, and org charts.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Employee Directory Home",
+        "icon": "👔",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Employee Directory"
+          },
+          {
+            "type": "callout",
+            "content": "Organize team information with contacts, roles, departments, and org charts."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "recruitment-pipeline": {
+    "title": "Recruitment Pipeline",
+    "description": "Track candidates through hiring process. Schedule interviews and manage applications.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Recruitment Pipeline Home",
+        "icon": "🎯",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Recruitment Pipeline"
+          },
+          {
+            "type": "callout",
+            "content": "Track candidates through hiring process. Schedule interviews and manage applications."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "vendor-management": {
+    "title": "Vendor Management",
+    "description": "Track vendors, contracts, and purchase orders. Manage supplier relationships.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Vendor Management Home",
+        "icon": "🏢",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Vendor Management"
+          },
+          {
+            "type": "callout",
+            "content": "Track vendors, contracts, and purchase orders. Manage supplier relationships."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "inventory-management": {
+    "title": "Inventory Management",
+    "description": "Track stock levels, reorder points, and suppliers. Perfect for small retail businesses.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Inventory Management Home",
+        "icon": "📦",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Inventory Management"
+          },
+          {
+            "type": "callout",
+            "content": "Track stock levels, reorder points, and suppliers. Perfect for small retail businesses."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "business-plan": {
+    "title": "Business Plan Template",
+    "description": "Structure your business plan with market analysis, financials, and strategy sections.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Business Plan Template Home",
+        "icon": "📋",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Business Plan Template"
+          },
+          {
+            "type": "callout",
+            "content": "Structure your business plan with market analysis, financials, and strategy sections."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "competitor-analysis": {
+    "title": "Competitor Analysis",
+    "description": "Track competitors, their strategies, pricing, and market positioning. Stay ahead.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Competitor Analysis Home",
+        "icon": "🔍",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Competitor Analysis"
+          },
+          {
+            "type": "callout",
+            "content": "Track competitors, their strategies, pricing, and market positioning. Stay ahead."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "product-roadmap": {
+    "title": "Product Roadmap",
+    "description": "Plan product features, releases, and timelines. Align team on product vision.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Product Roadmap Home",
+        "icon": "🗺️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Product Roadmap"
+          },
+          {
+            "type": "callout",
+            "content": "Plan product features, releases, and timelines. Align team on product vision."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "customer-feedback": {
+    "title": "Customer Feedback Hub",
+    "description": "Collect and organize customer feedback. Prioritize feature requests and bug reports.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Customer Feedback Hub Home",
+        "icon": "💬",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Customer Feedback Hub"
+          },
+          {
+            "type": "callout",
+            "content": "Collect and organize customer feedback. Prioritize feature requests and bug reports."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "swot-analysis": {
+    "title": "SWOT Analysis",
+    "description": "Analyze strengths, weaknesses, opportunities, and threats for strategic planning.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "SWOT Analysis Home",
+        "icon": "⚖️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "SWOT Analysis"
+          },
+          {
+            "type": "callout",
+            "content": "Analyze strengths, weaknesses, opportunities, and threats for strategic planning."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "partnership-tracker": {
+    "title": "Partnership Tracker",
+    "description": "Manage business partnerships, agreements, and collaboration opportunities.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Partnership Tracker Home",
+        "icon": "🤝",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Partnership Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Manage business partnerships, agreements, and collaboration opportunities."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "business-metrics": {
+    "title": "Business Metrics Dashboard",
+    "description": "Track KPIs, revenue, growth metrics, and business health indicators in one place.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Business Metrics Dashboard Home",
+        "icon": "📊",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Business Metrics Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Track KPIs, revenue, growth metrics, and business health indicators in one place."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "life-dashboard": {
+    "title": "Life Dashboard",
+    "description": "Central hub for all areas of life: goals, habits, finances, health, and relationships.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Life Dashboard Home",
+        "icon": "🌟",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Life Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "Central hub for all areas of life: goals, habits, finances, health, and relationships."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "gratitude-journal": {
+    "title": "Gratitude Journal",
+    "description": "Daily gratitude practice with prompts and reflections. Build positivity and mindfulness.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Gratitude Journal Home",
+        "icon": "🙏",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Gratitude Journal"
+          },
+          {
+            "type": "callout",
+            "content": "Daily gratitude practice with prompts and reflections. Build positivity and mindfulness."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "bucket-list": {
+    "title": "Bucket List",
+    "description": "Track life goals and experiences you want to have. Check off completed dreams.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Bucket List Home",
+        "icon": "🪣",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Bucket List"
+          },
+          {
+            "type": "callout",
+            "content": "Track life goals and experiences you want to have. Check off completed dreams."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "relationship-tracker": {
+    "title": "Relationship Tracker",
+    "description": "Nurture relationships with contact logs, gift ideas, and important dates.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Relationship Tracker Home",
+        "icon": "❤️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Relationship Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Nurture relationships with contact logs, gift ideas, and important dates."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "home-inventory": {
+    "title": "Home Inventory",
+    "description": "Catalog belongings for insurance, moving, or organization. Include photos and values.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Home Inventory Home",
+        "icon": "🏠",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Home Inventory"
+          },
+          {
+            "type": "callout",
+            "content": "Catalog belongings for insurance, moving, or organization. Include photos and values."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "car-maintenance": {
+    "title": "Car Maintenance Log",
+    "description": "Track vehicle maintenance, repairs, and expenses. Never miss an oil change.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Car Maintenance Log Home",
+        "icon": "🚗",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Car Maintenance Log"
+          },
+          {
+            "type": "callout",
+            "content": "Track vehicle maintenance, repairs, and expenses. Never miss an oil change."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "pet-care": {
+    "title": "Pet Care Tracker",
+    "description": "Track vet visits, medications, feeding schedules, and pet expenses.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Pet Care Tracker Home",
+        "icon": "🐾",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Pet Care Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track vet visits, medications, feeding schedules, and pet expenses."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "gift-planner": {
+    "title": "Gift Planner",
+    "description": "Track gift ideas, purchases, and occasions. Never forget a birthday or anniversary.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Gift Planner Home",
+        "icon": "🎁",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Gift Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Track gift ideas, purchases, and occasions. Never forget a birthday or anniversary."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "student-dashboard": {
+    "title": "Student Dashboard",
+    "description": "All-in-one student workspace with assignments, notes, grades, and study schedules.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Student Dashboard Home",
+        "icon": "🎓",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Student Dashboard"
+          },
+          {
+            "type": "callout",
+            "content": "All-in-one student workspace with assignments, notes, grades, and study schedules."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "course-planner": {
+    "title": "Course Planner",
+    "description": "Plan and organize courses with syllabus, assignments, and exam schedules.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Course Planner Home",
+        "icon": "📚",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Course Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Plan and organize courses with syllabus, assignments, and exam schedules."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "research-tracker": {
+    "title": "Research Project Tracker",
+    "description": "Organize research with sources, notes, citations, and writing progress.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Research Project Tracker Home",
+        "icon": "🔬",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Research Project Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Organize research with sources, notes, citations, and writing progress."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "flashcard-system": {
+    "title": "Flashcard Study System",
+    "description": "Create and organize flashcards for spaced repetition learning. Track mastery levels.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Flashcard Study System Home",
+        "icon": "🗂️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Flashcard Study System"
+          },
+          {
+            "type": "callout",
+            "content": "Create and organize flashcards for spaced repetition learning. Track mastery levels."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "language-learning": {
+    "title": "Language Learning Tracker",
+    "description": "Track vocabulary, grammar, practice sessions, and language learning progress.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Language Learning Tracker Home",
+        "icon": "🌍",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Language Learning Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track vocabulary, grammar, practice sessions, and language learning progress."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "teacher-planner": {
+    "title": "Teacher Planner",
+    "description": "Plan lessons, track student progress, and manage classroom activities.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Teacher Planner Home",
+        "icon": "👨‍🏫",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Teacher Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Plan lessons, track student progress, and manage classroom activities."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "online-course-tracker": {
+    "title": "Online Course Tracker",
+    "description": "Track online courses from Udemy, Coursera, etc. Monitor progress and certificates.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Online Course Tracker Home",
+        "icon": "💻",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Online Course Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track online courses from Udemy, Coursera, etc. Monitor progress and certificates."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "study-schedule": {
+    "title": "Study Schedule Planner",
+    "description": "Create study schedules with time blocks, subjects, and break reminders.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Study Schedule Planner Home",
+        "icon": "📅",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Study Schedule Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Create study schedules with time blocks, subjects, and break reminders."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "travel-planner": {
+    "title": "Travel Planner",
+    "description": "Plan your trips with itineraries, bookings, packing lists, and budget tracking.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Travel Planner Home",
+        "icon": "✈️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Travel Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Plan your trips with itineraries, bookings, packing lists, and budget tracking."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "trip-itinerary": {
+    "title": "Trip Itinerary Builder",
+    "description": "Create detailed day-by-day itineraries with activities, reservations, and maps.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Trip Itinerary Builder Home",
+        "icon": "🗺️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Trip Itinerary Builder"
+          },
+          {
+            "type": "callout",
+            "content": "Create detailed day-by-day itineraries with activities, reservations, and maps."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "packing-list": {
+    "title": "Packing List Generator",
+    "description": "Create customizable packing lists for different trip types. Never forget essentials.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Packing List Generator Home",
+        "icon": "🎒",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Packing List Generator"
+          },
+          {
+            "type": "callout",
+            "content": "Create customizable packing lists for different trip types. Never forget essentials."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "travel-journal": {
+    "title": "Travel Journal",
+    "description": "Document your travels with photos, memories, and reflections from each destination.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Travel Journal Home",
+        "icon": "📖",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Travel Journal"
+          },
+          {
+            "type": "callout",
+            "content": "Document your travels with photos, memories, and reflections from each destination."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "destination-research": {
+    "title": "Destination Research Hub",
+    "description": "Research destinations with attractions, restaurants, hotels, and travel tips.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Destination Research Hub Home",
+        "icon": "🌎",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Destination Research Hub"
+          },
+          {
+            "type": "callout",
+            "content": "Research destinations with attractions, restaurants, hotels, and travel tips."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "travel-budget": {
+    "title": "Travel Budget Tracker",
+    "description": "Track trip expenses by category. Stay within budget while traveling.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Travel Budget Tracker Home",
+        "icon": "💰",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Travel Budget Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track trip expenses by category. Stay within budget while traveling."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "bug-tracker": {
+    "title": "Bug Tracker",
+    "description": "Track bugs, issues, and technical debt. Prioritize and assign to team members.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Bug Tracker Home",
+        "icon": "🐛",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Bug Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track bugs, issues, and technical debt. Prioritize and assign to team members."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "code-snippets": {
+    "title": "Code Snippets Library",
+    "description": "Save and organize code snippets with syntax highlighting and tags.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Code Snippets Library Home",
+        "icon": "💻",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Code Snippets Library"
+          },
+          {
+            "type": "callout",
+            "content": "Save and organize code snippets with syntax highlighting and tags."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "api-documentation": {
+    "title": "API Documentation",
+    "description": "Document APIs with endpoints, parameters, examples, and authentication details.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "API Documentation Home",
+        "icon": "📡",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "API Documentation"
+          },
+          {
+            "type": "callout",
+            "content": "Document APIs with endpoints, parameters, examples, and authentication details."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "tech-stack": {
+    "title": "Tech Stack Tracker",
+    "description": "Document technologies, tools, and frameworks used in projects.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Tech Stack Tracker Home",
+        "icon": "🛠️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Tech Stack Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Document technologies, tools, and frameworks used in projects."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "learning-roadmap": {
+    "title": "Developer Learning Roadmap",
+    "description": "Plan your learning path with technologies to learn, resources, and progress tracking.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Developer Learning Roadmap Home",
+        "icon": "🗺️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Developer Learning Roadmap"
+          },
+          {
+            "type": "callout",
+            "content": "Plan your learning path with technologies to learn, resources, and progress tracking."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "deployment-checklist": {
+    "title": "Deployment Checklist",
+    "description": "Ensure smooth deployments with pre-launch checklists and rollback procedures.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Deployment Checklist Home",
+        "icon": "🚀",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Deployment Checklist"
+          },
+          {
+            "type": "callout",
+            "content": "Ensure smooth deployments with pre-launch checklists and rollback procedures."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "design-system": {
+    "title": "Design System",
+    "description": "Document design tokens, components, and guidelines for consistent UI/UX.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Design System Home",
+        "icon": "🎨",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Design System"
+          },
+          {
+            "type": "callout",
+            "content": "Document design tokens, components, and guidelines for consistent UI/UX."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "client-projects": {
+    "title": "Design Client Projects",
+    "description": "Manage design projects with briefs, revisions, feedback, and deliverables.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Design Client Projects Home",
+        "icon": "🖌️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Design Client Projects"
+          },
+          {
+            "type": "callout",
+            "content": "Manage design projects with briefs, revisions, feedback, and deliverables."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "brand-guidelines": {
+    "title": "Brand Guidelines",
+    "description": "Document brand identity with logos, colors, typography, and usage guidelines.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Brand Guidelines Home",
+        "icon": "🏷️",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Brand Guidelines"
+          },
+          {
+            "type": "callout",
+            "content": "Document brand identity with logos, colors, typography, and usage guidelines."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "inspiration-board": {
+    "title": "Design Inspiration Board",
+    "description": "Collect and organize design inspiration with images, links, and notes.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Design Inspiration Board Home",
+        "icon": "✨",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Design Inspiration Board"
+          },
+          {
+            "type": "callout",
+            "content": "Collect and organize design inspiration with images, links, and notes."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "marketing-campaigns": {
+    "title": "Marketing Campaign Tracker",
+    "description": "Plan and track marketing campaigns with goals, budgets, and performance metrics.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Marketing Campaign Tracker Home",
+        "icon": "📢",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Marketing Campaign Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Plan and track marketing campaigns with goals, budgets, and performance metrics."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "email-marketing": {
+    "title": "Email Marketing Planner",
+    "description": "Plan email campaigns with sequences, templates, and performance tracking.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Email Marketing Planner Home",
+        "icon": "📧",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Email Marketing Planner"
+          },
+          {
+            "type": "callout",
+            "content": "Plan email campaigns with sequences, templates, and performance tracking."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "seo-tracker": {
+    "title": "SEO Tracker",
+    "description": "Track keywords, rankings, backlinks, and SEO performance for your website.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "SEO Tracker Home",
+        "icon": "🔍",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "SEO Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track keywords, rankings, backlinks, and SEO performance for your website."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "lead-magnet-tracker": {
+    "title": "Lead Magnet Tracker",
+    "description": "Track lead magnets, opt-in rates, and conversion funnels.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Lead Magnet Tracker Home",
+        "icon": "🧲",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Lead Magnet Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Track lead magnets, opt-in rates, and conversion funnels."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "brand-mentions": {
+    "title": "Brand Mentions Tracker",
+    "description": "Monitor brand mentions, reviews, and social media sentiment.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Brand Mentions Tracker Home",
+        "icon": "👀",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Brand Mentions Tracker"
+          },
+          {
+            "type": "callout",
+            "content": "Monitor brand mentions, reviews, and social media sentiment."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  },
+  "affiliate-program": {
+    "title": "Affiliate Program Manager",
+    "description": "Manage affiliates, track commissions, and monitor referral performance.",
+    "databases": [
+      {
+        "key": "items_db",
+        "title": "Items",
+        "description": "Main collection",
+        "properties": {
+          "Name": {
+            "type": "title"
+          },
+          "Category": {
+            "type": "select",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "Status": {
+            "type": "select",
+            "options": [
+              "New",
+              "Done"
+            ]
+          },
+          "Date": {
+            "type": "date"
+          },
+          "Notes": {
+            "type": "rich_text"
+          }
+        }
+      }
+    ],
+    "pages": [
+      {
+        "title": "Affiliate Program Manager Home",
+        "icon": "🤝",
+        "blocks": [
+          {
+            "type": "heading_1",
+            "content": "Affiliate Program Manager"
+          },
+          {
+            "type": "callout",
+            "content": "Manage affiliates, track commissions, and monitor referral performance."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "heading_2",
+            "content": "Overview"
+          },
+          {
+            "type": "linked_database",
+            "linked_database_source": "items_db"
+          }
+        ]
+      }
+    ]
+  }
+}
