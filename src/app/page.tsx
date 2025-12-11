@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight, Sparkles, Search, LayoutGrid, List, Calendar, Database, CheckCircle, ArrowUpRight, LayoutTemplate, Loader2 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { TemplateGallery } from "@/components/TemplateGallery";
@@ -15,7 +15,7 @@ import { LimitModal } from "@/components/LimitModal";
 
 export const dynamic = 'force-dynamic';
 
-export default function Home() {
+function HomeContent() {
   const { user, loading, canUseAI, supabase } = useUser();
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isLimitOpen, setIsLimitOpen] = useState(false);
@@ -291,5 +291,13 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode, titl
       <h3 className="font-semibold text-lg mb-2">{title}</h3>
       <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
