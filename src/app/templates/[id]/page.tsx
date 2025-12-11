@@ -46,37 +46,37 @@ export default function TemplateDetailPage() {
         }
 
         setIsInstalling(true);
-        setInstallStatus("Finding your Notion workspace...");
+        setInstallStatus("Preparing your template...");
 
         try {
-            // Find a parent page
-            const searchRes = await fetch("/api/search", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-            });
-            const searchData = await searchRes.json();
+            // Create a downloadable JSON file
+            const templateData = {
+                version: "1.0",
+                template: installBlueprint,
+                metadata: {
+                    name: template.name,
+                    description: template.description,
+                    author: template.author,
+                    createdAt: new Date().toISOString()
+                }
+            };
 
-            if (!searchRes.ok) throw new Error(searchData.error || "Failed to find parent page");
-            const parentPageId = searchData.pageId;
+            // Convert to JSON and create download
+            const jsonString = JSON.stringify(templateData, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
 
-            setInstallStatus("Building your template in Notion...");
+            // Create download link
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `${template.id}-template.json`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
 
-            // Build
-            const buildRes = await fetch("/api/notion/build", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    blueprint: installBlueprint,
-                    parentPageId
-                }),
-            });
-            const buildData = await buildRes.json();
-
-            if (!buildRes.ok) throw new Error(buildData.error || "Build failed");
-
-            setResultPageId(buildData.pageId);
             setStep("success");
-            setInstallStatus("Done!");
+            setInstallStatus("Downloaded!");
         } catch (error: any) {
             console.error(error);
             setInstallStatus(`Error: ${error.message}`);
@@ -92,24 +92,34 @@ export default function TemplateDetailPage() {
                     <div className="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto">
                         <CheckCircle className="w-8 h-8" />
                     </div>
-                    <h2 className="text-3xl font-bold">Template Installed!</h2>
+                    <h2 className="text-3xl font-bold">Template Downloaded!</h2>
                     <p className="text-muted-foreground">
-                        {template.name} has been successfully added to your Notion workspace.
+                        {template.name} has been downloaded. Follow these steps to import it into Notion:
                     </p>
-                    {resultPageId && (
-                        <a
-                            href={`https://notion.so/${resultPageId.replace(/-/g, "")}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-left space-y-3">
+                        <h3 className="font-semibold text-blue-900">How to Import:</h3>
+                        <ol className="text-sm text-blue-800 space-y-2 list-decimal list-inside">
+                            <li>Open Notion and go to any page</li>
+                            <li>Type <code className="bg-blue-100 px-1 rounded">/import</code> and press Enter</li>
+                            <li>Select "Import" → "JSON"</li>
+                            <li>Choose the downloaded file</li>
+                            <li>Your template will be created! ✨</li>
+                        </ol>
+                    </div>
+
+                    <div className="pt-4 space-y-3">
+                        <Link
+                            href="/templates"
+                            className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
                         >
-                            Open in Notion <ArrowRight className="w-4 h-4" />
-                        </a>
-                    )}
-                    <div className="pt-4">
-                        <Link href="/templates" className="text-primary hover:underline">
-                            ← Browse more templates
+                            Browse More Templates
                         </Link>
+                        <div>
+                            <Link href="/" className="text-sm text-primary hover:underline">
+                                ← Back to home
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -361,7 +371,31 @@ export default function TemplateDetailPage() {
                                 )}
                             </div>
 
-                            {installBlueprint ? (
+
+                            {/* Priority 1: Notion Duplicate Link (Best UX) */}
+                            {template.duplicateLink ? (
+                                <>
+                                    <a
+                                        href={template.duplicateLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                                    >
+                                        <Download className="w-4 h-4" />
+                                        Duplicate to Notion
+                                    </a>
+
+                                    <div className="text-sm text-center text-muted-foreground space-y-2">
+                                        <p className="font-medium">One-click installation:</p>
+                                        <ol className="text-left space-y-1 text-xs">
+                                            <li>1. Click "Duplicate to Notion" above</li>
+                                            <li>2. Opens in your Notion workspace</li>
+                                            <li>3. Click "Duplicate" → Done! ✅</li>
+                                        </ol>
+                                    </div>
+                                </>
+                            ) : installBlueprint ? (
+                                /* Priority 2: Download JSON (Fallback) */
                                 <>
                                     <button
                                         onClick={handleInstall}
@@ -371,12 +405,12 @@ export default function TemplateDetailPage() {
                                         {isInstalling ? (
                                             <>
                                                 <Loader2 className="w-4 h-4 animate-spin" />
-                                                Installing...
+                                                Preparing...
                                             </>
                                         ) : (
                                             <>
                                                 <Download className="w-4 h-4" />
-                                                Install to Notion
+                                                Download Template
                                             </>
                                         )}
                                     </button>
@@ -388,36 +422,16 @@ export default function TemplateDetailPage() {
                                     )}
 
                                     <div className="text-sm text-center text-muted-foreground space-y-2">
-                                        <p className="font-medium">One-click installation:</p>
+                                        <p className="font-medium">Easy import:</p>
                                         <ol className="text-left space-y-1 text-xs">
-                                            <li>1. Click "Install to Notion" above</li>
-                                            <li>2. Template builds in your workspace</li>
-                                            <li>3. Start using immediately ✅</li>
-                                        </ol>
-                                    </div>
-                                </>
-                            ) : template.duplicateLink ? (
-                                <>
-                                    <a
-                                        href={template.duplicateLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
-                                    >
-                                        <Download className="w-4 h-4" />
-                                        Get Template
-                                    </a>
-
-                                    <div className="text-sm text-center text-muted-foreground space-y-2">
-                                        <p className="font-medium">How to install:</p>
-                                        <ol className="text-left space-y-1 text-xs">
-                                            <li>1. Click "Get Template" above</li>
-                                            <li>2. Click "Duplicate" in Notion</li>
-                                            <li>3. Template added to your workspace ✅</li>
+                                            <li>1. Click "Download Template" above</li>
+                                            <li>2. Open Notion, type /import</li>
+                                            <li>3. Select the downloaded file ✅</li>
                                         </ol>
                                     </div>
                                 </>
                             ) : (
+                                /* Priority 3: AI Generation (Last Resort) */
                                 <>
                                     <Link
                                         href={`/?prompt=${encodeURIComponent(`Create a ${template.name}: ${template.description}`)}`}
@@ -436,6 +450,7 @@ export default function TemplateDetailPage() {
                                     </div>
                                 </>
                             )}
+
 
                             <div className="pt-4 border-t border-border space-y-3 text-sm text-muted-foreground">
                                 <div className="flex items-start gap-2">

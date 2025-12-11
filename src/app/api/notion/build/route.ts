@@ -38,8 +38,9 @@ export async function POST(req: NextRequest) {
 
         if (!accessToken) {
             return NextResponse.json({
-                error: "Notion not connected. Please connect your Notion workspace first.",
-                needsNotionAuth: true
+                error: "Direct installation requires Notion integration. Please use the 'Build with AI' feature instead to create this template!",
+                needsNotionAuth: true,
+                suggestion: "ai_generation"
             }, { status: 403 });
         }
 
